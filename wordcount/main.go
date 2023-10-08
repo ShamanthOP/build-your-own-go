@@ -96,6 +96,10 @@ func main() {
 		fileReader = file
 	}
 
+	/*
+         * TODO: Build a file processing pipeline using channels instead
+	*/
+
 	wg := new(sync.WaitGroup)
 
 	byteReader, byteWriter := io.Pipe()
