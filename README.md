@@ -1,1 +1,1 @@
-# byo-go
+# build your own-go
