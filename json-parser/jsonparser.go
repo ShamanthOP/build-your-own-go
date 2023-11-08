@@ -18,6 +18,10 @@ func trimWhiteSpace(json string, currentPosition int) int {
 	return count
 }
 
+/*
+ * TODO: Use functional or object oriented approach
+ */
+
 func Parse(stringToParse string) (interface{}, error) {
 	parsedJson, err, _ := internalParse(stringToParse, 0)
 	return parsedJson, err
