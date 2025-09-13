@@ -31,7 +31,7 @@ func internalParse(json string, currentPosition int) (interface{}, error, int) {
 	newPosition := trimWhiteSpace(json, currentPosition) + currentPosition
 
 	if newPosition >= len(json) {
-		return nil, errors.New("Expecting token but reached end"), len(json) - currentPosition
+		return nil, errors.New("expecting token but reached end"), len(json) - currentPosition
 	}
 
 	switch json[newPosition] {
@@ -62,7 +62,7 @@ func parseArray(json string, currentPosition int) ([]interface{}, error, int) {
 				needValueEnd = false
 				continue
 			} else {
-				return arr, errors.New("Unexpected token"), i - currentPosition + 1
+				return arr, errors.New("unexpected token"), i - currentPosition + 1
 			}
 		}
 
@@ -77,7 +77,7 @@ func parseArray(json string, currentPosition int) ([]interface{}, error, int) {
 		i++
 	}
 
-	return arr, errors.New("Unexpected token"), i - currentPosition
+	return arr, errors.New("unexpected token"), i - currentPosition
 }
 
 func parseObject(json string, currentPosition int) (map[string]interface{}, error, int) {

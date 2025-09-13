@@ -1,7 +1,7 @@
 package jsonparser_test
 
 import (
-	"jsonparser"
+	"jsonparser/jsonparser"
 	"reflect"
 	"testing"
 )
